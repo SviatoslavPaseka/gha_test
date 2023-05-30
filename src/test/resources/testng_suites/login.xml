@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="gsmarena registration and login test" verbose="1">
+    <test name="Succesful login test">
+        <classes>
+            <class name="com.solvd.spa.gui_tests.LoginTest">
+                <methods>
+                    <include name="successfulLoginTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
