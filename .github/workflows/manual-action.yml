@@ -16,6 +16,7 @@ jobs:
           java-version: '11'
           distribution: 'temurin'
           cache: maven
+
       - name: Start Selenium Server and WebDriver
         run: |
 #          Download Selenium Server
@@ -30,15 +31,16 @@ jobs:
           # Wait for Selenium Server to start
           sleep 5
 
-#      - name: Start selenoid server
-#        uses: n-ton4/selenoid-github-action@master
-#        id: start-selenoid
-#        continue-on-error: false
-#        with:
-#          version: 1.10.1
-#          args: -limit 10
-#          browsers: chrome
-#          last-versions: 1
-
       - name: Run testing
         run: mvn clean test -Dsuite=login
+
+
+        #      - name: Start selenoid server
+        #        uses: n-ton4/selenoid-github-action@master
+        #        id: start-selenoid
+        #        continue-on-error: false
+        #        with:
+        #          version: 1.10.1
+        #          args: -limit 10
+        #          browsers: chrome
+        #          last-versions: 1
