@@ -16,31 +16,31 @@ jobs:
           java-version: '11'
           distribution: 'temurin'
           cache: maven
+      - name: Start selenoid server
+        uses: n-ton4/selenoid-github-action@master
+        id: start-selenoid
+        continue-on-error: false
+        with:
+          version: 1.10.1
+          args: -limit 10
+          browsers: chrome
+          last-versions: 1
 
-      - name: Start Selenium Server and WebDriver
-        run: |
-#          Download Selenium Server
-          wget https://selenium-release.storage.googleapis.com/3.141/selenium-server-standalone-3.141.59.jar
-#          Start Selenium Server in the background
-          java -jar selenium-server-standalone-3.141.59.jar -port 4444 &
-          # Download WebDriver (e.g., ChromeDriver)
-          wget https://chromedriver.storage.googleapis.com/94.0.4606.61/chromedriver_linux64.zip
-          unzip chromedriver_linux64.zip
-          # Add WebDriver to the PATH
-          echo "export PATH=\$PATH:`pwd`" >> $GITHUB_ENV
-          # Wait for Selenium Server to start
-          sleep 5
+#      - name: Start Selenium Server and WebDriver
+#        run: |
+##          Download Selenium Server
+#          wget https://selenium-release.storage.googleapis.com/3.141/selenium-server-standalone-3.141.59.jar
+##          Start Selenium Server in the background
+#          java -jar selenium-server-standalone-3.141.59.jar -port 4444 &
+#          # Download WebDriver (e.g., ChromeDriver)
+#          wget https://chromedriver.storage.googleapis.com/94.0.4606.61/chromedriver_linux64.zip
+#          unzip chromedriver_linux64.zip
+#          # Add WebDriver to the PATH
+#          echo "export PATH=\$PATH:`pwd`" >> $GITHUB_ENV
+#          # Wait for Selenium Server to start
+#          sleep 5
 
       - name: Run testing
         run: mvn clean test -Dsuite=login
 
 
-        #      - name: Start selenoid server
-        #        uses: n-ton4/selenoid-github-action@master
-        #        id: start-selenoid
-        #        continue-on-error: false
-        #        with:
-        #          version: 1.10.1
-        #          args: -limit 10
-        #          browsers: chrome
-        #          last-versions: 1
