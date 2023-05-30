@@ -26,8 +26,6 @@ jobs:
 #          browsers: chrome
 #          last-versions: 1
 
-#          java -jar selenium-server-standalone-3.141.59.jar -port 4444 &
-
       - name: Start Selenium Server and WebDriver
         run: |
           wget https://selenium-release.storage.googleapis.com/3.141/selenium-server-standalone-3.141.59.jar
