@@ -43,8 +43,7 @@ jobs:
       - name: Start Selenium Server
         run: |
           wget https://selenium-release.storage.googleapis.com/3.141/selenium-server-standalone-3.141.59.jar
-          CHROME_DRIVER_PATH=$(which chromedriver)
-          java -Dwebdriver.chrome.driver="${CHROME_DRIVER_PATH}" -jar selenium-server-standalone-3.141.59.jar &
+          java -Dwebdriver.chrome.driver="/usr/local/bin/chromedriver" -jar selenium-server-standalone-3.141.59.jar &
           sleep 10 # Wait for the server to start
 
       - name: Run testing
