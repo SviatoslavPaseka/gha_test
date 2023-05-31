@@ -25,6 +25,9 @@ jobs:
           sudo dpkg -i google-chrome-stable_current_amd64.deb
           sudo apt-get install -f
 
+      - name: Display Chrome version
+        run: google-chrome-stable --version
+
       - name: Download Chrome WebDriver
         run: |
           CHROME_VERSION=$(google-chrome-stable --version | grep -oP "(?<=Google Chrome )([0-9]+)")
@@ -33,6 +36,9 @@ jobs:
           unzip chromedriver_linux64.zip
           sudo mv chromedriver /usr/local/bin/
           sudo chmod +x /usr/local/bin/chromedriver
+
+      - name: Display Chrome WebDriver version
+        run: chromedriver --version
 
       - name: Start Selenium Server
         run: |
