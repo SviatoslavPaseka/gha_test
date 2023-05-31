@@ -17,14 +17,28 @@ jobs:
           distribution: 'temurin'
           cache: maven
 
-      - name: Start Selenium Server and WebDriver
+      - name: Install Chrome browser
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wget
+          wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+          sudo dpkg -i google-chrome-stable_current_amd64.deb
+          sudo apt-get install -f
+
+      - name: Download Chrome WebDriver
+        run: |
+          CHROME_VERSION=$(google-chrome-stable --version | grep -oP "(?<=Google Chrome )([0-9]+)")
+          CHROME_DRIVER_VERSION=$(curl -sS https://chromedriver.storage.googleapis.com/LATEST_RELEASE_${CHROME_VERSION})
+          wget https://chromedriver.storage.googleapis.com/${CHROME_DRIVER_VERSION}/chromedriver_linux64.zip
+          unzip chromedriver_linux64.zip
+          sudo mv chromedriver /usr/local/bin/
+          sudo chmod +x /usr/local/bin/chromedriver
+
+      - name: Start Selenium Server
         run: |
           wget https://selenium-release.storage.googleapis.com/3.141/selenium-server-standalone-3.141.59.jar
-          java -jar selenium-server-standalone-3.141.59.jar -port 4444 &
-          wget https://chromedriver.storage.googleapis.com/94.0.4606.61/chromedriver_linux64.zip
-          unzip chromedriver_linux64.zip
-          echo "export PATH=\$PATH:`pwd`" >> $GITHUB_ENV
-          sleep 5
+          java -jar selenium-server-standalone-3.141.59.jar &
+          sleep 10 # Wait for the server to start
 
       - name: Run testing
         run: mvn clean test -Dsuite=login
