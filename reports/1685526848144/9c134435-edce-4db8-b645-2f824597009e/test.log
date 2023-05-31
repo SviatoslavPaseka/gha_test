@@ -1,0 +1,10 @@
+[2023-05-31 09:54:09] [1] [WARN] Reporting disabled: using no op test run registrar
+[2023-05-31 09:54:09] [1] [INFO] TEST [gha_java_test - successfulLoginTest] STARTED at [12:54:09 2023-05-31]
+[2023-05-31 09:54:09] [1] [INFO] Starting driver session...
+[2023-05-31 09:54:10] [1] [INFO] Driver session started.
+[2023-05-31 09:54:10] [1] [INFO] INFO: opening url 'https://www.gsmarena.com'
+[2023-05-31 09:54:12] [1] [INFO] PASS: element 'loginLink' is clicked.
+[2023-05-31 09:54:13] [1] [INFO] PASS: keys 'kpitya01@gmail.com' are sent to element 'emailInput'.
+[2023-05-31 09:54:15] [1] [INFO] PASS: keys '768124zzXX#' are sent to element 'passwordInput'.
+[2023-05-31 09:54:16] [1] [INFO] PASS: element 'loginButton' is clicked.
+[2023-05-31 09:54:17] [1] [INFO] TEST [gha_java_test - successfulLoginTest] PASSED at [12:54:17 2023-05-31]
