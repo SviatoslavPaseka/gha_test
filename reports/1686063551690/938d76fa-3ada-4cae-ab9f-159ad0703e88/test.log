@@ -1,15 +1,13 @@
-[2023-05-30 01:26:58] [1] [WARN] Reporting disabled: using no op test run registrar
-[2023-05-30 01:26:58] [1] [INFO] TEST [gha_java_test - successfulLoginTest] STARTED at [16:26:58 2023-05-30]
-[2023-05-30 01:26:58] [1] [INFO] Starting driver session...
-[2023-05-30 01:26:59] [1] [INFO] Driver session started.
-[2023-05-30 01:26:59] [1] [INFO] INFO: opening url 'https://www.gsmarena.com'
-[2023-05-30 01:27:20] [1] [ERROR] TEST [gha_java_test - successfulLoginTest] FAILED at [16:27:20 2023-05-30] - Unable to open url during 20sec!
+[2023-06-06 02:59:12] [1] [WARN] Reporting disabled: using no op test run registrar
+[2023-06-06 02:59:12] [1] [INFO] TEST [gha_java_test - successfulLoginTest] STARTED at [17:59:12 2023-06-06]
+[2023-06-06 02:59:12] [1] [ERROR] TEST [gha_java_test - successfulLoginTest] FAILED at [17:59:12 2023-06-06] - org/openqa/selenium/chromium/ChromiumOptions
 
-org.testng.Assert.fail(Assert.java:110)
-com.qaprosoft.carina.core.foundation.webdriver.DriverHelper.openURL(DriverHelper.java:173)
-com.qaprosoft.carina.core.foundation.webdriver.DriverHelper.openURL(DriverHelper.java:145)
-com.qaprosoft.carina.core.foundation.webdriver.DriverHelper.open(DriverHelper.java:135)
-com.solvd.spa.gui_tests.LoginTest.successfulLoginTest(LoginTest.java:19)
+com.qaprosoft.carina.core.foundation.webdriver.core.factory.DriverFactory.create(DriverFactory.java:70)
+com.qaprosoft.carina.core.foundation.webdriver.IDriverPool.createDriver(IDriverPool.java:401)
+com.qaprosoft.carina.core.foundation.webdriver.IDriverPool.getDriver(IDriverPool.java:124)
+com.qaprosoft.carina.core.foundation.webdriver.IDriverPool.getDriver(IDriverPool.java:84)
+com.qaprosoft.carina.core.foundation.webdriver.IDriverPool.getDriver(IDriverPool.java:72)
+com.solvd.spa.gui_tests.LoginTest.successfulLoginTest(LoginTest.java:18)
 java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -36,4 +34,4 @@ org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
 org.testng.TestNG.runSuites(TestNG.java:1099)
 org.testng.TestNG.run(TestNG.java:1067)
 com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
-com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)

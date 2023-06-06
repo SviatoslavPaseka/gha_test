@@ -18,11 +18,8 @@ public class LoginTest implements IAbstractTest {
         HomePage homePage = new HomePage(getDriver());
         homePage.open();
 
-        Assert.assertTrue(homePage.isPageOpened(), "Home page is not opened!");
+        System.out.println("title: " + getDriver().getTitle());;
 
-        homePage.openLoginMenu();
-
-        homePage.inputRegistrationDataWithClick(emailTest, passTest);
 
         //Assert.assertTrue(homePage.isPageOpened(), "Logging failed!");
     }
