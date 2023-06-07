@@ -1,0 +1,23 @@
+[2023-06-07 01:43:12] [1] [WARN] Reporting disabled: using no op test run registrar
+[2023-06-07 01:43:12] [1] [INFO] 
+============= Test configuration =============
+url=https://www.gsmarena.com
+env=DEMO
+selenium_url=http://localhost:4444/wd/hub
+auto_screenshot=true
+project_report_directory=./reports
+max_screen_history=10
+localization_encoding=UTF-8
+language=en_US
+selenium_url=http://localhost:4444/wd/hub
+
+------------- Driver capabilities -----------
+capabilities.providerOptions=options
+capabilities.browserName=chrome
+capabilities.browserVersion=114
+================================================
+
+[2023-06-07 01:43:13] [1] [WARN] Reporting disabled: using no op test run registrar
+[2023-06-07 01:43:13] [1] [INFO] [TestNG] Running:
+  /Users/sviatoslavpaseka/Library/Caches/JetBrains/IdeaIC2023.1/temp-testng-customsuite.xml
+

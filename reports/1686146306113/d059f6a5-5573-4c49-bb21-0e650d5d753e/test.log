@@ -1,0 +1,6 @@
+[2023-06-07 01:58:27] [1] [WARN] Reporting disabled: using no op test run registrar
+[2023-06-07 01:58:27] [1] [INFO] TEST [gha_java_test - successfulLoginTest] STARTED at [16:58:27 2023-06-07]
+[2023-06-07 01:58:27] [1] [INFO] Starting driver session...
+[2023-06-07 01:58:28] [1] [INFO] Driver session started.
+[2023-06-07 01:58:28] [1] [INFO] INFO: opening url 'https://www.gsmarena.com'
+[2023-06-07 01:58:29] [1] [INFO] TEST [gha_java_test - successfulLoginTest] PASSED at [16:58:29 2023-06-07]

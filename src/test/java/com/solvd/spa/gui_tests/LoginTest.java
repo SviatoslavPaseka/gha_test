@@ -20,7 +20,6 @@ public class LoginTest implements IAbstractTest {
 
         System.out.println("title: " + getDriver().getTitle());;
 
-
         //Assert.assertTrue(homePage.isPageOpened(), "Logging failed!");
     }
 }
